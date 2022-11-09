@@ -9,8 +9,8 @@ const App = () =>  {
         <Navbar/>
         <Welcome/>
         <Transactions/>
+        <Footer/>
       </div>
-      <Footer/>
     </div>
   )
 }
