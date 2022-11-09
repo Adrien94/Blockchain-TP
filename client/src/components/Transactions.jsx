@@ -10,7 +10,7 @@ const TransactionCard = ({addressTo, addressFrom, timestamp, message, keyword, a
     const gifUrl = useFetch({keyword})
 
     return (
-        <div classname="bg-[#181918] m-4 flex flex-1
+        <div className="bg-[#181918] m-4 flex flex-1
         2x1:min-w-[450px]
         2x1:max-w-[500px]
         sm:min-w-[270px]
@@ -47,7 +47,7 @@ const TransactionCard = ({addressTo, addressFrom, timestamp, message, keyword, a
 }
 
 const Transactions = () => {
-    const {currentAccount} = useContext(TransactionContext);
+    const {currentAccount, transactions} = useContext(TransactionContext);
 
     return (
         <div className="flex w-full justify-center items-center 2x1:px-20 gradient-bg-transations">
@@ -59,8 +59,8 @@ const Transactions = () => {
                 )}
 
                 <div className="flex flex-wrap justify-center items-center mt-10">
-                    {dummyData.reverse().map((transactions, i) => (
-                        <TransactionCard key={i} {...transactions} />
+                    {transactions.reverse().map((transaction, i) => (
+                        <TransactionCard key={i} {...transaction} />
                     ))}
                 </div>
 

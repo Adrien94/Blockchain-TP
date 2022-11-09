@@ -22,7 +22,7 @@ const Input = ( {placeholder, name, type, value, handleChange} ) => (
 //gradient couleur classnames etc à changer dans Index.css
 
 const Welcome = () => {
-    const {connectWallet, currentAccount, formData, sendTransaction, handleChange} = useContext(TransactionContext); 
+    const {connectWallet, currentAccount, formData, sendTransaction, handleChange, isLoading} = useContext(TransactionContext); 
 
     const handleSubmit = (e) => {
         const {addressTo, amount, keyword, message} = formData;
@@ -74,14 +74,14 @@ const Welcome = () => {
                         </div>
 
                         <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-                            <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
+                            <Input placeholder="Addresse d'envoi" name="addressTo" type="text" handleChange={handleChange} />
                             <Input placeholder="Quantité (ETH)" name="amount" type="number" handleChange={handleChange} />
                             <Input placeholder="Mot (GiF)" name="keyword" type="text" handleChange={handleChange} />
                             <Input placeholder="Message" name="message" type="text" handleChange={handleChange} />
 
                             <div className="h-[1px] w-full bg-gray-400 my-2"/>
 
-                            {false ? (
+                            {isLoading ? (
                                 <Loader />
                             ) : (
                                 <button type="button" onClick={handleSubmit} className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer">
