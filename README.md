@@ -26,7 +26,7 @@ puis :
 
 puis : 
 
-npm install
+    npm install
 
 pour lancer l'app dans un navigateur :
 
