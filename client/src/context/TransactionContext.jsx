@@ -22,7 +22,7 @@ const getEthereumContract = () => {
 export const TransactionProvider = ({ children }) => {
 
     const [currentAccount, setCurrentAccount] = useState('');
-    const [formData, setFormData] = useState({ addressTo: '', amount: '', keyword: '', message: '' });
+    const [formData, setFormData] = useState({addressTo: '',amount: '',keyword: '',message: '' });
 
     const handleChange = (e, name) => {
         setFormData ((prevState) => ({...prevState, [name]: e.target.value}));
@@ -68,7 +68,7 @@ export const TransactionProvider = ({ children }) => {
 
             const {addressTo, amount, keyword, message} = formData;
             getEthereumContract();
-            
+
         } catch (error) {
             console.log(error);
 
