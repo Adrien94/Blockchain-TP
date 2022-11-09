@@ -1,7 +1,9 @@
+import React, {useContext} from 'react';
 import { AiFillPlayCircle } from "react-icons/ai";
 import {SiEthereum} from "react-icons/si";
 import {BsInfoCircle} from "react-icons/bs";
 
+import { TransactionContext } from "../context/TransactionContext";
 import {Loader} from './';
 
 const Input = ( {placeholder, name, type, value, handleChange} ) => (
@@ -17,13 +19,18 @@ const Input = ( {placeholder, name, type, value, handleChange} ) => (
 
 //Titres, textes etc à revoir
 //gradient couleur classnames etc à changer dans Index.css
+
 const Welcome = () => {
-    const connectWallet = () => {
+    const {connectWallet, currentAccount, formData, sendTransaction, handleChange} = useContext(TransactionContext); 
 
-    }
+    const handleSubmit = (e) => {
+        const {addressTo, amount, keyword, message} = formData;
 
-    const handleSubmit = () => {
+        e.preventDefault();
 
+        if(!addressTo || !amount || !keyword || !message ) return;
+
+        sendTransaction();
     }
 
     return (
@@ -36,13 +43,14 @@ const Welcome = () => {
                     <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base" >
                         Explorer le monde des cryptos. 
                     </p>
+                    {!currentAccount && (
                     <button
                         type="button"
                         onClick={connectWallet}
                         className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd]"
                         >
                         <p className="text-white text-base font-semibold">Connection au Wallet</p>
-                    </button>
+                    </button>)}
 
                     <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
                         <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
@@ -65,21 +73,17 @@ const Welcome = () => {
                         </div>
 
                         <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-                            <Input placeholder="Address To" name="adressTo" type="text" handleChange={ () => {}} />
-                            <Input placeholder="Quantité (ETH)" name="amount" type="number" handleChange={ () => {}} />
-                            <Input placeholder="Mot (GiF)" name="keyword" type="text" handleChange={ () => {}} />
-                            <Input placeholder="Message" name="message" type="text" handleChange={ () => {}} />
+                            <Input placeholder="Address To" name="adressTo" type="text" handleChange={handleChange} />
+                            <Input placeholder="Quantité (ETH)" name="amount" type="number" handleChange={handleChange} />
+                            <Input placeholder="Mot (GiF)" name="keyword" type="text" handleChange={handleChange} />
+                            <Input placeholder="Message" name="message" type="text" handleChange={handleChange} />
 
                             <div className="h-[1px] w-full bg-gray-400 my-2"/>
 
                             {false ? (
                                 <Loader />
                             ) : (
-                                <button
-                                type="button" 
-                                onClick={handleSubmit}
-                                className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
-                                >
+                                <button type="button" onClick={handleSubmit} className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer">
                                 Envoyer
                                 </button>
                             )}
