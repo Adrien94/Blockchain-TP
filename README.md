@@ -11,10 +11,13 @@ Une fois que le projet est cloné
 Se placer dans la branche "dev/rpfeiffer"
 
 se placer dans le dossier "client" :
+
 cd ./client/
 
 npm init vite@latest
+
     react
+
     react-js
 
 npm install
