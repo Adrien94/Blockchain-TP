@@ -18,9 +18,6 @@ const Input = ( {placeholder, name, type, value, handleChange} ) => (
     />
 );
 
-//Titres, textes etc à revoir
-//gradient couleur classnames etc à changer dans Index.css
-
 const Welcome = () => {
     const {connectWallet, currentAccount, formData, sendTransaction, handleChange, isLoading} = useContext(TransactionContext); 
 
