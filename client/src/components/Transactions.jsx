@@ -16,7 +16,7 @@ const TransactionCard = ({addressTo, addressFrom, timestamp, message, keyword, a
         " >
             <div className="flex flex-col items-center w-full mt-3">
                 <div className="flex justify-start w-full mb-6 p-2">
-                    <a href={'https://ropsten.etherscan.io/address/${addressFrom}'} target="_blank" rel="noopener noreferrer" ></a>k
+                    <a href={'https://ropsten.etherscan.io/address/${addressFrom}'} target="_blank" rel="noopener noreferrer" ></a>
                 </div>
             </div>
 
