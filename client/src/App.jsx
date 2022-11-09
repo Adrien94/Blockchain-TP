@@ -1,5 +1,7 @@
 import {Navbar, Welcome, Services, Footer, Transactions} from './components';
 //changer le className gradient-bg-welcome
+//gradient couleur classnames etc à changer dans Index.css
+
 const App = () =>  {
   return (
     <div className="min-h-screen">
