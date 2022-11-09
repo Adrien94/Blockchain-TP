@@ -1,6 +1,6 @@
 README Projet BlockChain OCRES ING5 Grp2
 
-Projet fait en groupe de 3 avec : PFEIFFER Romain, KHIERCHE Adrien, LARNAUDIE Alexandre 
+Projet fait en groupe de 3 avec : PFEIFFER Romain, KHIRECHE Adrien, LARNAUDIE Alexandre 
 
 COMMENT LANCER L'APP ?
 
@@ -25,7 +25,7 @@ npm run dev
 
 DESCRIPTION APP, COMMENT L'UTILISER ?
 
-Ce site permet d'échanger des ETH entre compte Metamask. La "killer feature" est l'ajout d'un mot clef qui sera traduit par un GiF une fois la transaction réalisée. 
+Ce site permet d'échanger des ETH entre compte Metamask. La "killer feature" est l'ajout d'un mot clef qui sera traduit par un GiF une fois la transaction réalisée. Ce site est adapté pour tous les appareils.
 
 Il faut un compte Metamask pour pouvoir utiliser cette app. 
 Remplir le champ "addresse d'envoi" par l'adresse du wallet auquel vous voulez envoyer vos ETH.
