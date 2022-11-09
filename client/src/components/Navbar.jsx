@@ -2,9 +2,7 @@ import { useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 
-import logo from '../../images/logo.png'; //A changer mettre un truc de l'ece ptet?
-//Elements de la barre à changer (tjs besoin?)
-//Couleurs à changer bg-[#2952e3] et hover:bg-[#2546bd]
+import logo from '../../images/logo.png';
 
 const NavbarItems = ({title, classProps }) => {
     return (
