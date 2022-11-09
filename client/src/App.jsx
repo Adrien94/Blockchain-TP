@@ -1,4 +1,4 @@
-import {Navbar, Welcome, Services, Footer, Transactions} from './components';
+import {Navbar, Welcome, Footer, Transactions} from './components';
 //changer le className gradient-bg-welcome
 //gradient couleur classnames etc à changer dans Index.css
 
