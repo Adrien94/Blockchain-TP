@@ -9,6 +9,7 @@ Il faut obligatoirement avoir un compte Metamask ainsi que l'extension Chrome aj
 Une fois que le projet est cloné
 
 Se placer dans la branche 
+
     "dev/rpfeiffer"
 
 se placer dans le dossier "client" :
