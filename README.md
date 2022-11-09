@@ -1,3 +1,13 @@
-README BlockChain Projet OCRES ING5 Grp2
+README Projet BlockChain OCRES ING5 Grp2
 
-Projet fait en groupe ded 3 avec : PFEIFFER Romain, KHIERCHE Adrien, LARNAUDIE Alexandre 
+Projet fait en groupe de 3 avec : PFEIFFER Romain, KHIERCHE Adrien, LARNAUDIE Alexandre 
+
+COMMENT LANCER L'APP ?
+
+
+DESCRIPTION APP, COMMENT L'UTILISER ?
+
+
+EN QUOI LA BLOCKCHAIN EST IMPORTANTE POUR CE PROJET ?
+
+
