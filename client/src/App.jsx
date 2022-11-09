@@ -3,7 +3,7 @@ import {Navbar, Welcome, Services, Footer, Transactions} from './components';
 const App = () =>  {
   return (
     <div className="min-h-screen">
-      <div className="gradient-bg-welcome"> 
+      <div className="bg-gradient-to-r from-cyan-500 to-blue-500"> 
         <Navbar/>
         <Welcome/>
       </div>
