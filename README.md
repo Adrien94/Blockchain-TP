@@ -12,18 +12,25 @@ Se placer dans la branche "dev/rpfeiffer"
 
 se placer dans le dossier "client" :
 
-cd ./client/
+    cd ./client/
 
-npm init vite@latest
+puis :
+
+    npm init vite@latest
+
+puis : 
 
     react
 
     react-js
 
+puis : 
+
 npm install
 
 pour lancer l'app dans un navigateur :
-npm run dev
+
+    npm run dev
 
 
 DESCRIPTION APP, COMMENT L'UTILISER ?
